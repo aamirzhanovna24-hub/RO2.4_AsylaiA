@@ -1,0 +1,20 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double number;
+
+        Console.Write("Enter a number: ");
+        while (!double.TryParse(Console.ReadLine(), out number))
+        {
+            Console.Write("Invalid input. Enter a valid number: ");
+        }
+
+        if (number == 5 || number == 10)
+            Console.WriteLine("The number is either 5 or 10");
+        else
+            Console.WriteLine("Unknown number");
+    }
+}
