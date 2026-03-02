@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double deposit;
+
+        Console.Write("Enter deposit amount: ");
+        while (!double.TryParse(Console.ReadLine(), out deposit))
+        {
+            Console.Write("Invalid input. Enter a valid number: ");
+        }
+
+        double interestRate;
+
+        if (deposit < 100)
+            interestRate = 0.05;
+        else if (deposit <= 200)
+            interestRate = 0.07;
+        else
+            interestRate = 0.10;
+
+        double finalAmount = deposit + deposit * interestRate;
+
+        Console.WriteLine("Deposit amount with interest: " + finalAmount);
+    }
+}
