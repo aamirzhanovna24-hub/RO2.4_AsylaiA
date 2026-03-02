@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double num1, num2;
+
+        Console.Write("Enter first number: ");
+        while (!double.TryParse(Console.ReadLine(), out num1))
+        {
+            Console.Write("Invalid input. Enter a valid number: ");
+        }
+
+        Console.Write("Enter second number: ");
+        while (!double.TryParse(Console.ReadLine(), out num2))
+        {
+            Console.Write("Invalid input. Enter a valid number: ");
+        }
+
+        if (num1 == num2)
+            Console.WriteLine("The numbers are equal");
+        else if (num1 > num2)
+            Console.WriteLine("The first number is greater than the second");
+        else
+            Console.WriteLine("The first number is less than the second");
+    }
+}
